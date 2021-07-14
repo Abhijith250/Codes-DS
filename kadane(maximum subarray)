@@ -1,0 +1,16 @@
+    def maxSubArray(self, nums):
+        cur=0
+        maxsum=0
+        c=0
+        for n in nums:
+            if n<0:
+                c+=1
+        if c==len(nums):
+            return max(nums)
+        for i in nums:
+            cur+=i
+            if cur>maxsum:
+                maxsum=cur
+            if cur<0:
+                cur=0
+        return maxsum
