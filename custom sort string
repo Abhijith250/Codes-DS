@@ -1,0 +1,12 @@
+    def customSortString(self, order, str):
+        c=Counter(str)
+        new=''
+        for i in order:
+            if i in c.keys():
+                new+=i*c[i]
+                del c[i]
+        lis=[]
+        for k,j in c.items():
+            print(k,j)
+            lis.extend(k*j)
+        return new+''.join(lis)
