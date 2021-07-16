@@ -1,0 +1,13 @@
+def insertionsort(lis):
+    n=len(lis)
+    for i in range(1,len(lis)):
+        ele=lis[i]
+        j=i-1
+        while(j>=0 and lis[j]>ele):
+            lis[j+1]=lis[j]
+            j=j-1
+        lis[j+1]=ele
+       
+      
+    print(lis)
+insertionsort([3,5,7,2,1])
